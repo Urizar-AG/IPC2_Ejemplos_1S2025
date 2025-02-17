@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario>
+    <tienda nombre="Tienda A">
+        <producto pasillo="2" estante="3">
+            <nombre>Producto A</nombre>
+            <stock>10</stock>
+        </producto>
+        <producto pasillo="1" estante="2">
+            <nombre>Producto B</nombre>
+            <stock>5</stock>
+        </producto>
+    </tienda>
+    <tienda nombre="Tienda B">
+        <producto pasillo="1" estante="1">
+            <nombre>Producto C</nombre>
+            <stock>15</stock>
+        </producto>
+    </tienda>
+</inventario>
