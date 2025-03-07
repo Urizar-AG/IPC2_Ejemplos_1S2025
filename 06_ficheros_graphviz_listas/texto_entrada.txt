@@ -1,0 +1,6 @@
+Este es un ejemplo de linea.
+Ayer fue un dia soleado.
+HOY ES UN DIA EN MAYUSCULAS.
+El año es 2024.
+123 numeros en la linea.
+python es divertido.
