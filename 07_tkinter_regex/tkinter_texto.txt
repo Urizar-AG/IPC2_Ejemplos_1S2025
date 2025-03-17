@@ -1,0 +1,4 @@
+Hola IPC2
+Este es un ejemplo de abrir un archivo con Tkinter
+
+Python
