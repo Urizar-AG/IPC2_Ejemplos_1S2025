@@ -1,0 +1,224 @@
+/* Variables CSS */
+:root {
+    --primary-color: #0077B6;   
+    --secondary-color: #00A896;
+    --text-color: #000000;
+    --bg-color: #FFFFFF;
+    --space: 10px;
+}
+
+/* Confiugración inicial a todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5; /* Altura de la línea */
+    color: var(--text-color); /* Color del texto */
+    background-color: var(--bg-color); /* Color de fondo */
+}
+
+/* -------------------- Grid Layout --------------------*/
+body {
+    display: grid;
+    /* Define las áreas del grid */
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header; /* Referencia al área que definimos en Grid*/
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--space);
+}
+
+main {
+    grid-area: main;
+    padding: var(--space);
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--space);
+}
+
+/* --------------------  --------------------*/
+#inicio {
+    justify-content: center;
+    text-align: center;
+}
+
+/* -------------------- Estilos para la imagen --------------------*/
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    max-width: 100%; /* Para que el ancho de la imagen no exceda el elemento contenedor */
+    height: auto; /* Mantiene proporciones */
+    object-fit: cover; /* Ajusta la imagen al elemento contenedor */
+    border-radius: 10px; /* Borde redondeado */
+}
+
+/* -------------------- Flexbox para los componentes --------------------*/
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; /* Quita el estilo de lista*/
+    gap: var(--space);
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none; /* Elimina la decoración del Anchor*/
+    padding: var(--space);
+}
+
+.nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+}
+
+section {
+    margin: calc(var(--space) * 2) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space);
+}
+
+/* -------------------- Estilos para las tablas --------------------*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 2px;
+    background-color: white;
+}
+
+th, td {
+    padding: calc(var(--space) * 0.75);
+    text-align: left;
+    border: 2px solid #000000;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase; /* Transforma el texto a mayúsculas*/
+    font-size: 1em; /* em -> Define el tamaño de letra en función del elemento padre*/
+}
+
+/* even -> par */
+/* odd -> impar */
+tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5);;
+}
+
+tbody tr:hover {
+    background-color: rgba(0, 119, 182, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+tfoot {
+    font-style: italic;
+    background-color: #e9ecef;
+}
+
+/* -------------------- Estilos para elementos dentro del formulario --------------------*/
+input, textarea, select {
+    padding: var(--space);
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: var(--space);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none; /* Línea alrededor de los elementos, diferente de los bordes */
+    border-color: var(--secondary-color);
+}
+
+/* Selectores avanzados */
+section > h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: calc(var(--space) / 2);
+}
+
+aside ul {
+    list-style: circle;
+    padding-left: var(--space);
+}
+
+/* -------------------- Media Query --------------------*/
+
+/* 
+    Para ver funcionamiento: 
+
+    Opción 1:
+    Cambiar el tamaño de la ventana 
+
+    Opción 2:
+    Presionar F12 en el navegador y buscar la opción de Responsive
+
+*/
+
+
+/* Para pantallas con un ancho mayor a 750px */
+@media (min-width: 750px) {
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space);
+    }
+    
+    .form-group label {
+        flex: 0 0 120px;
+    }
+    
+    table {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+/* Para pantallas con un ancho menor 750px */
+@media (max-width: 750px) {
+    img {
+        width: 100%; /* Se adapta al ancho del contenedor en pantallas pequeñas */
+        height: auto;
+    }
+}

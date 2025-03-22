@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recursos para estudiantes - Curso Académico">
+    <title>Portal Estudiante</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a hoja de estilos (archivo .css) -->
+    <link rel="icon" type="image/x-icon" href="imagen.png">
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Portal Estudiante</h1>
+        <!-- Enlaces de navegación -->
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <section id="inicio">
+            <h2>Bienvenidos al Curso</h2>
+            <p>Laboratorio de Introducción a la Programación y Computación 2 P</p>
+            <figure>
+                <img src="imagen.png" alt="portada">
+            </figure>
+        </section>
+
+
+        <section id="recursos">
+            <h2>Recursos Académicos</h2>
+            <article>
+                <h4>Horario de Evaluaciones</h4>
+                <p>Pronto estará disponible el horario de evaluaciones para el curso...</p>
+            </article>
+
+            <aside>
+                <h4>Fechas Importantes</h4>
+                <ul>
+                    <li>Practica 1: 01 de Enero</li>
+                    <li>Ensayo: 25 de Diciembre</li>
+                    <li>Feriado: No hay</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section>
+            <h2>Calendario de Evaluaciones de IPC2</h2>
+            <table>
+                <!-- Encabezado -->
+                <thead>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <!-- Contenido de la tabla -->
+                <tbody>
+                    <!-- Primer fila -->
+                    <tr>
+                        <td>Examen Corto</td>
+                        <td>20/03/2025</td>
+                        <td>Completado</td>
+                    </tr>
+                    <!-- Segunda fila -->
+                    <tr>
+                        <td>Primer Parcial</td>
+                        <td>21/04/2025</td>
+                        <td>Pendiente</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Nota: Las fechas pueden estar sujetas a cambios</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section id="contacto">
+            <h2>Consultar al Auxiliar</h2>
+            <!-- Formulario de datos -->
+            <form action="submit" method="post">
+                <fieldset> <!-- Recuadro al rededor del formulario-->
+                    <legend>Envíar Consulta</legend>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre Apellido" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="correo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duda">Duda:</label>
+                        <select id="duda" name="duda">
+                            <option>Magistral</option>
+                            <option>Laboratorio</option>
+                            <option>Otra</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Consulta:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar Consulta</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>2025 Portal Estudiante - IPC2 P</p>
+    </footer>
+</body>
+</html>
+
+<!-- 
+    Al diseñar una página web no es necesario/obligatorio seguir esta estructura  
+    ni organizar los elementos de esta forma, está página es solo por ejemplo.
+-->

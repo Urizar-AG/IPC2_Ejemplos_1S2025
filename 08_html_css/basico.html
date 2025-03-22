@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- Documento HTML  -->
+<lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Codificación  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion HTML</title> <!-- Título de la página  -->
+</head>
+<br>
+    <!-- Encabezados  -->
+    <h1>Hola mundo</h1>
+    <h2>Hola mundo</h2>
+    <h3>Hola mundo</h3>
+    <h4>Hola mundo</h4>
+    <h5>Hola mundo</h5>
+    <h6>Hola mundo</h6>
+
+    <!-- Párrafo y etiquetas de texto -->
+    <br>
+        Este es un pequeño párrafo de texto en html con varias lineas que incluye varias etiquetas.</br>
+        <strong>El texto de esta línea está en negrita</strong></br>
+        <em>Esta línea está en cursiva</em></br>
+        <u>Texto subrayado en la quinta línea</u> </br>
+        Línea final del párrafo.
+    </p>
+
+    <!-- Lista desordenada  -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+
+    <!-- Lista ordenada -->
+    <ol>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ol>
+
+    <!-- Tabla -->
+    <table>
+        <!-- Estilo en línea -->
+        <tr style="background-color: lightblue;">
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+        </tr>
+        <tr>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+        </tr>
+        <tr>
+            <td>Elemento 3</td>
+            <td>Elemento 4</td>
+        </tr>
+    </table>
+
+    <!-- Imagen  -->
+    <img src="imagen.png" alt="Texto alternativo si no carga la imagen">
+    </br>
+
+    <!-- Botones -->
+    <button type="button" id="boton" onclick="alert('Hiciste click')">Click</button> <!-- Tipo button, ejecuta una función -->
+    <button type="submit">Envío de formularios</button>
+    <button type="reset">Limpiar formularios</button>
+    </br>
+
+    <!-- Input -->
+    <!-- placeholder = sugerencia al usuario de lo que se espera en el campo -->
+    <!-- 
+        si le colocamos un id al input y en label colocamos el atributo for
+        se asocia ese label al input, al hacer click en el texto del label automaticamente
+        el foco se coloca sobre el input asociado
+    -->
+    <!-- 
+        required = vuelve el campo obligatorio, pero está validación es solo visual para el usuario
+        un usuario con conocimiento pude modificar el elemento y quitar dicha verificación
+    -->
+    <label for="texto">Input text</label>
+    <input type="text" id="texto" name="texto" placeholder="Escribe algo"> 
+    </br>
+
+    <label for="correo">Input email</label>
+    <input type="email" id="correo" placeholder="correo@correo.com" required>
+    </br>
+
+    <label for="numeros">Input number</label>
+    <input type="number" id="numeros" placeholder="123">
+    </br>
+
+    <label for="caja">Input checkbox</label>
+    <input type="checkbox" id="caja">
+    </br>
+
+    <label for="calendario">Input date</label>
+    <input type="date" id="calendario">
+    </br>
+
+    <!-- Anchor -->
+    <a href="https://portal.ingenieria.usac.edu.gt/">Portal Ingeniería</a>
+
+    <!-- Contenedor en bloque (block) -->
+    <div></div>
+    <!-- Contenedor en línea (in-line) -->
+    <span></span>
+
+    <!-- Definir los estilos CSS dentro del documento -->
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        #boton {
+            font-family: monospace;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: black;
+            color: white;
+        }
+
+        #boton:hover {
+            background-color: lightblue;
+            color: #000000;
+        }
+    </style>
+</body>
+</html>
