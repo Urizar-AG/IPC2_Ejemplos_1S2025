@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Lista de estudiantes registrados</h1>
+    <a href="{{ url_for('inicio') }}" class="boton">Volver a la página inicial</a>  
+    <table>
+        <thead>
+            <tr>
+                <th>Carnet</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- 
+                Bloque for para recorrer la lista de estudiantes que se recibe como 
+                argumento en la función render_template en el archivo app.py
+            -->
+            {% for estudiante in estudiantes %}
+            <!-- En cada iteración agrega una fila a la tabla con información del estudiante -->
+            <tr>
+                <td>{{ estudiante.get_carnet() }}</td>
+                <td>{{ estudiante.get_nombre() }}</td>
+                <td>{{ estudiante.get_correo() }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
